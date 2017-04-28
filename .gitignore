@@ -1,0 +1,7 @@
+*.suo
+_ReSharper.Caches
+bin
+obj
+/.vs
+/packages/*
+!/packages/repositories.config
