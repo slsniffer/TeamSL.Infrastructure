@@ -9,9 +9,16 @@ namespace TeamSL.Infrastructure.Example
 {
     public class NHibernateInitializer : INHibernateInitializer
     {
+        private readonly IDbConfiguration _dbConfiguration;
+
+        public NHibernateInitializer(IDbConfiguration dbConfiguration)
+        {
+            _dbConfiguration = dbConfiguration;
+        }
+
         public Configuration GetConfiguration()
         {
-            var config = SQLiteConfiguration.Standard.UsingFile("test.db");
+            var config = SQLiteConfiguration.Standard.UsingFile(_dbConfiguration.DatabaseName);
 
             var fluentConfiguration = Fluently.Configure()
                 .Database(config)

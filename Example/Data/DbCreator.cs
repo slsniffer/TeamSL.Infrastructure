@@ -11,13 +11,20 @@ namespace TeamSL.Infrastructure.Example
 
     public class DbCreator : IDbCreator
     {
+        private readonly IDbConfiguration _dbConfiguration;
+
+        public DbCreator(IDbConfiguration dbConfiguration)
+        {
+            _dbConfiguration = dbConfiguration;
+        }
+
         public void Create()
         {
             try
             {
                 var persister = SQLiteConfiguration
                     .Standard
-                    .UsingFile("test.db");
+                    .UsingFile(_dbConfiguration.DatabaseName);
 
                 var configuration = Fluently
                     .Configure()

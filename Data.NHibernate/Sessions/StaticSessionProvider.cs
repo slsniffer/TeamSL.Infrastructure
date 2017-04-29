@@ -3,9 +3,6 @@ using NHibernate.Context;
 
 namespace TeamSL.Infrastructure.Data.NHibernate
 {
-    /// <summary>
-    /// Draft version
-    /// </summary>
     public class StaticSessionProvider : ISessionProvider
     {
         private readonly ISessionFactory _sessionFactory;
@@ -14,8 +11,6 @@ namespace TeamSL.Infrastructure.Data.NHibernate
         {
             _sessionFactory = sessionFactory;
         }
-
-        #region ISessionProvider Members
 
         public ISession CurrentSession
         {
@@ -27,8 +22,6 @@ namespace TeamSL.Infrastructure.Data.NHibernate
                 return _sessionFactory.GetCurrentSession();
             }
         }
-
-        #endregion
 
         public void Dispose()
         {

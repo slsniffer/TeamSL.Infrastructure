@@ -54,8 +54,8 @@
     <Compile Include="NHibernateRepository.cs" />
     <Compile Include="NHibernateUnitOfWork.cs" />
     <Compile Include="NHibernateUnitOfWorkFactory.cs" />
-    <Compile Include="PerRequestSessionProvider.cs" />
-    <Compile Include="StaticSessionProvider.cs" />
+    <Compile Include="Sessions\PerRequestSessionProvider.cs" />
+    <Compile Include="Sessions\StaticSessionProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">

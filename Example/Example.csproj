@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleLogger.cs" />
+    <Compile Include="Data\DbConfiguration.cs" />
     <Compile Include="Data\DbCreator.cs" />
     <Compile Include="Data\NHibernateInitializer.cs" />
     <Compile Include="Data\PostRecord.cs" />

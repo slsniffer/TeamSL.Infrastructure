@@ -15,6 +15,7 @@ namespace TeamSL.Infrastructure.Example
             // Registration demo services.
             builder.RegisterType<Presenter>().As<IPresenter>();
             builder.RegisterType<DbCreator>().As<IDbCreator>();
+            builder.RegisterType<DbConfiguration>().As<IDbConfiguration>();
 
             // Registration database infrastructure.
             builder.RegisterNHibernate();
