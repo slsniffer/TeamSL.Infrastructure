@@ -1,5 +1,5 @@
 # Overview
-It is simple, well-organized and clean platform to build simple CRUD solutions based on CQRS pattern based on .NET framework.
+It is simple, well-organized and clean platform to build simple CRUD solutions build on CQRS pattern using .NET framework.
 
 ## Tools
 - [Autofac](https://github.com/autofac/Autofac) - good inversion of control container for .NET applications.
