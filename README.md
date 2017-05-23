@@ -3,7 +3,7 @@ It is simple, well-organized and clean platform to build simple CRUD solutions b
 
 ## Tools
 - [Autofac](https://github.com/autofac/Autofac) - good inversion of control container for .NET applications.
-- [NHibernate](https://github.com/nhibernate) - one of the most popular ORM framework
+- [NHibernate](https://github.com/nhibernate) - is one of the most popular ORM frameworks
 - [Fluent.NHibernate](https://github.com/jagregory/fluent-nhibernate) - good configuration framework for NHibernate.
 - [log4net](https://logging.apache.org/log4net/) - popular logging framework
 
