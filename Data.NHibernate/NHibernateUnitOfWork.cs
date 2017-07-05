@@ -13,7 +13,7 @@ namespace TeamSL.Infrastructure.Data.NHibernate
         public NHibernateUnitOfWork(ISession session, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted)
         {
             if (session == null)
-                throw new ArgumentNullException("session");
+                throw new ArgumentNullException(nameof(session));
 
             //CurrentSessionContext.Bind(session);
 

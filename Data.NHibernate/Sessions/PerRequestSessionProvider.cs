@@ -15,7 +15,7 @@ namespace TeamSL.Infrastructure.Data.NHibernate
         public PerRequestSessionProvider(ISessionFactory sessionFactory)
         {
             if (sessionFactory == null)
-                throw new ArgumentNullException("sessionFactory");
+                throw new ArgumentNullException(nameof(sessionFactory));
 
             _sessionFactory = sessionFactory;
 
