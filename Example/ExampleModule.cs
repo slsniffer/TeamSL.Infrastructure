@@ -2,6 +2,7 @@
 using TeamSL.Infrastructure.Data.NHibernate;
 using TeamSL.Infrastructure.Data.NHibernate.Autofac;
 using TeamSL.Infrastructure.Domain.Autofac;
+using TeamSL.Infrastructure.Domain.Caching;
 using Module = Autofac.Module;
 
 namespace TeamSL.Infrastructure.Example
@@ -27,6 +28,7 @@ namespace TeamSL.Infrastructure.Example
             builder.RegisterQueryHandlers(GetType().Assembly);
             builder.RegisterCommandHandlers(GetType().Assembly);
             builder.RegisterMemoryCaching();
+            builder.RegisterType<NullCacheConfiguration>().As<ICacheConfiguration>();
 
             // Reister logging.
             builder.RegisterModule<LoggingModule>();
