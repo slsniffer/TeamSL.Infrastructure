@@ -7,7 +7,6 @@ namespace TeamSL.Infrastructure.Domain.Queries
 {
     public class QueryHandlerCachingDecorator<TQuery, TResult> : IQueryHandler<TQuery, TResult>
         where TQuery : class, IQuery<TResult>
-        where TResult : class
     {
         private readonly IQueryHandler<TQuery, TResult> _decorated;
         private readonly ICacheStorage _storage;
@@ -42,7 +41,7 @@ namespace TeamSL.Infrastructure.Domain.Queries
             result = _decorated.Ask(query);
 
             if (result == null)
-                return null;
+                return default(TResult);
 
             var cacheQueryAttr = query.GetType().GetCustomAttribute<CacheQueryAttribute>();
             if (cacheQueryAttr != null)

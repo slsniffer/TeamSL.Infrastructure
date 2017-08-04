@@ -142,16 +142,16 @@ namespace TeamSL.Infrastructure.Data.NHibernate
 
         private void Update(TRecord record)
         {
-            Session.Evict(record);
-            Session.Merge(record);
+            Session.SaveOrUpdate(record);
         }
 
         private void CreateOrUpdate(TRecord record)
         {
-            if (record.Id > 0)
-                Update(record);
-            else
-                Create(record);
+            Session.SaveOrUpdate(record);
+            //if (record.Id > 0)
+            //    Update(record);
+            //else
+            //    Create(record);
         }
 
         private void Delete(TRecord record)

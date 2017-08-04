@@ -17,7 +17,7 @@ namespace TeamSL.Infrastructure.Data.NHibernate.Autofac
 
         public static void RegisterPerRequestSessionProvider(this ContainerBuilder builder)
         {
-            builder.RegisterType<PerRequestSessionProvider>().As<ISessionProvider>().InstancePerRequest();
+            builder.RegisterType<PerRequestSessionProvider>().As<ISessionProvider>().InstancePerLifetimeScope();
         }
 
         public static void RegisterStaticSessionProvider(this ContainerBuilder builder)

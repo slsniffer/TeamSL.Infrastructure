@@ -4,7 +4,6 @@ namespace TeamSL.Infrastructure.Domain.Queries
 {
     public class QueryHandlerLoggingDecorator<TQuery, TResult> : IQueryHandler<TQuery, TResult>
         where TQuery : class, IQuery<TResult>
-        where TResult : class
     {
         private readonly IQueryHandler<TQuery, TResult> _decorated;
 
