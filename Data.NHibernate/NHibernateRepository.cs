@@ -27,7 +27,7 @@ namespace TeamSL.Infrastructure.Data.NHibernate
 
         protected override IQueryable<TRecord> Table
         {
-            get { return Session.Query<TRecord>().Cacheable(); }
+            get { return Session.Query<TRecord>(); }
         }
 
         TRecord IReadRepository<TRecord>.Load(long id)
@@ -148,10 +148,6 @@ namespace TeamSL.Infrastructure.Data.NHibernate
         private void CreateOrUpdate(TRecord record)
         {
             Session.SaveOrUpdate(record);
-            //if (record.Id > 0)
-            //    Update(record);
-            //else
-            //    Create(record);
         }
 
         private void Delete(TRecord record)
@@ -161,7 +157,7 @@ namespace TeamSL.Infrastructure.Data.NHibernate
 
         private TRecord Load(long id)
         {
-            return Session.Get<TRecord>(id);
+            return Session.Load<TRecord>(id);
         }
     }
 }

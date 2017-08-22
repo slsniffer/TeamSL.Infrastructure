@@ -22,5 +22,15 @@ namespace TeamSL.Infrastructure.Data
             order(orderable);
             return orderable.Queryable;
         }
+
+        public static IQueryable<T> PageBy<T>(this IQueryable<T> queryable, int skip, int take)
+        {
+            if (queryable == null)
+            {
+                throw new ArgumentNullException(nameof(queryable));
+            }
+
+            return queryable.Skip(skip).Take(take);
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace TeamSL.Infrastructure.Data
 
         protected TRecord Load(long id, IFetchStrategy<TRecord> fetchStrategy)
         {
-            Checks.NotNull(fetchStrategy, "fetchStrategy");
+            Checks.NotNull(fetchStrategy, nameof(fetchStrategy));
 
             var queryable = Table.Where(x => x.Id == id);
 
@@ -18,15 +18,15 @@ namespace TeamSL.Infrastructure.Data
 
         protected TRecord Find(IQuerySpecification<TRecord> specification)
         {
-            Checks.NotNull(specification, "specification");
+            Checks.NotNull(specification, nameof(specification));
 
             return Table.FilterBy(specification).SingleOrDefault();
         }
 
         protected TRecord Find(IQuerySpecification<TRecord> specification, IFetchStrategy<TRecord> fetchStrategy)
         {
-            Checks.NotNull(specification, "specification");
-            Checks.NotNull(fetchStrategy, "fetchStrategy");
+            Checks.NotNull(specification, nameof(specification));
+            Checks.NotNull(fetchStrategy, nameof(fetchStrategy));
 
             return Table.FilterBy(specification).Fetch(fetchStrategy).SingleOrDefault();
         }
@@ -38,7 +38,7 @@ namespace TeamSL.Infrastructure.Data
 
         protected int Count(IQuerySpecification<TRecord> specification)
         {
-            Checks.NotNull(specification, "specification");
+            Checks.NotNull(specification, nameof(specification));
 
             return Table.FilterBy(specification).Count();
         }
@@ -50,22 +50,22 @@ namespace TeamSL.Infrastructure.Data
 
         protected IQueryable<TRecord> FindAll(IQuerySpecification<TRecord> specification)
         {
-            Checks.NotNull(specification, "specification");
+            Checks.NotNull(specification, nameof(specification));
 
             return Table.FilterBy(specification);
         }
 
         protected IQueryable<TRecord> FindAll(IFetchStrategy<TRecord> fetchStrategy)
         {
-            Checks.NotNull(fetchStrategy, "fetchStrategy");
+            Checks.NotNull(fetchStrategy, nameof(fetchStrategy));
 
             return Table.Fetch(fetchStrategy);
         }
 
         protected IQueryable<TRecord> FindAll(IQuerySpecification<TRecord> specification, IFetchStrategy<TRecord> fetchStrategy)
         {
-            Checks.NotNull(specification, "specification");
-            Checks.NotNull(fetchStrategy, "fetchStrategy");
+            Checks.NotNull(specification, nameof(specification));
+            Checks.NotNull(fetchStrategy, nameof(fetchStrategy));
 
             return Table.FilterBy(specification).Fetch(fetchStrategy);
         }

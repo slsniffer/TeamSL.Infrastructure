@@ -30,7 +30,7 @@ namespace TeamSL.Infrastructure.Data
         {
             _queryable = _queryable
                 .OrderBy(keySelector1)
-                .OrderBy(keySelector2);
+                .ThenBy(keySelector2);
             return this;
         }
 
@@ -40,7 +40,7 @@ namespace TeamSL.Infrastructure.Data
         {
             _queryable = _queryable
                 .OrderBy(keySelector1)
-                .OrderBy(keySelector2)
+                .ThenBy(keySelector2)
                 .OrderBy(keySelector3);
             return this;
         }
@@ -57,7 +57,7 @@ namespace TeamSL.Infrastructure.Data
         {
             _queryable = _queryable
                 .OrderByDescending(keySelector1)
-                .OrderByDescending(keySelector2);
+                .ThenByDescending(keySelector2);
             return this;
         }
 
@@ -67,7 +67,7 @@ namespace TeamSL.Infrastructure.Data
         {
             _queryable = _queryable
                 .OrderByDescending(keySelector1)
-                .OrderByDescending(keySelector2)
+                .ThenByDescending(keySelector2)
                 .OrderByDescending(keySelector3);
             return this;
         }
