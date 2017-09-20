@@ -1,4 +1,4 @@
-﻿namespace TeamSL.Infrastructure.Example
+namespace TeamSL.Infrastructure.Example.Data
 {
     public interface IDbConfiguration
     {

@@ -1,8 +1,8 @@
-﻿using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate.Tool.hbm2ddl;
 
-namespace TeamSL.Infrastructure.Example
+namespace TeamSL.Infrastructure.Example.Data
 {
     public interface IDbCreator
     {

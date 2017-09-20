@@ -1,7 +1,8 @@
-﻿using TeamSL.Infrastructure.Data;
+using TeamSL.Infrastructure.Data;
 using TeamSL.Infrastructure.Domain.Commands;
+using TeamSL.Infrastructure.Example.Data;
 
-namespace TeamSL.Infrastructure.Example
+namespace TeamSL.Infrastructure.Example.Domain
 {
     public class CreatePostCommand : ICommand
     {
@@ -31,7 +32,7 @@ namespace TeamSL.Infrastructure.Example
 
         public void Execute(CreatePostCommand command)
         {
-            _postRepository.Create(new PostRecord {Title = command.Title, Body = command.Body, CategoryId = command.CategoryId});
+            _postRepository.Create(new PostRecord {Title = command.Title, Body = command.Body, Category = new CategoryRecord {Id = command.CategoryId}});
         }
     }
 }

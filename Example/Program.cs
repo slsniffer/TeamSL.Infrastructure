@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using Autofac;
+using TeamSL.Infrastructure.Example.Data;
 
 namespace TeamSL.Infrastructure.Example
 {

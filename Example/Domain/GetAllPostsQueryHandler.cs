@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using TeamSL.Infrastructure.Data;
 using TeamSL.Infrastructure.Domain.Caching;
 using TeamSL.Infrastructure.Domain.Queries;
+using TeamSL.Infrastructure.Example.Data;
 
-namespace TeamSL.Infrastructure.Example
+namespace TeamSL.Infrastructure.Example.Domain
 {
     [CacheQuery]
     public class GetAllPostsQuery : IQuery<IList<PostRecord>>

@@ -1,4 +1,4 @@
-﻿using Autofac;
+using Autofac;
 
 namespace TeamSL.Infrastructure.Data.NHibernate.Autofac
 {
@@ -38,6 +38,8 @@ namespace TeamSL.Infrastructure.Data.NHibernate.Autofac
             builder.RegisterGenericDecorator(typeof(RepositoryLoggingDecorator<>), writeRepositoryType, writeRepositoryKey);
 
             builder.RegisterType<RepositoryFactory>().As<IRepositoryFactory>();
+
+            builder.RegisterType<ContentReader>().As<IContentReader>();
         }
     }
 }

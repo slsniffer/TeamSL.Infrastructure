@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using TeamSL.Infrastructure.Data;
 using TeamSL.Infrastructure.Data.Specifications;
 using TeamSL.Infrastructure.Domain.Caching;
 using TeamSL.Infrastructure.Domain.Queries;
+using TeamSL.Infrastructure.Example.Data;
 
-namespace TeamSL.Infrastructure.Example
+namespace TeamSL.Infrastructure.Example.Domain
 {
     [CacheQuery]
     public class GetPostsByCategoryQuery : IQuery<IList<PostRecord>>
@@ -30,7 +31,7 @@ namespace TeamSL.Infrastructure.Example
 
         public IQueryable<PostRecord> SatisfyingElementsFrom(IQueryable<PostRecord> candidates)
         {
-            return candidates.Where(x => x.CategoryId == _categoryId);
+            return candidates.Where(x => x.Category.Id == _categoryId);
         }
     }
 

@@ -1,11 +1,11 @@
-﻿using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate.Cfg;
 using NHibernate.Context;
 using NHibernate.Tool.hbm2ddl;
 using TeamSL.Infrastructure.Data.NHibernate;
 
-namespace TeamSL.Infrastructure.Example
+namespace TeamSL.Infrastructure.Example.Data
 {
     public class NHibernateInitializer : INHibernateInitializer
     {

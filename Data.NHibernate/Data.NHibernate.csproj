@@ -47,6 +47,8 @@
     <Compile Include="..\Common\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="BaseQueryCriteria.cs" />
+    <Compile Include="ContentReader.cs" />
     <Compile Include="INHibernateInitializer.cs" />
     <Compile Include="ISessionProvider.cs" />
     <Compile Include="NhRecord.cs" />
