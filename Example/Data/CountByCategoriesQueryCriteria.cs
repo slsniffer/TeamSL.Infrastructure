@@ -1,10 +1,7 @@
 using System.Collections.Generic;
 using NHibernate;
 using NHibernate.Criterion;
-using NHibernate.Engine;
-using NHibernate.SqlCommand;
 using NHibernate.Transform;
-using NHibernate.Type;
 using TeamSL.Infrastructure.Data.NHibernate;
 
 namespace TeamSL.Infrastructure.Example.Data
