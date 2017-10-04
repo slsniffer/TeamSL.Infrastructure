@@ -1,4 +1,4 @@
-﻿using TeamSL.Infrastructure.Tools.Logging;
+using TeamSL.Infrastructure.Tools.Logging;
 
 namespace TeamSL.Infrastructure.Domain.Queries
 {
@@ -19,12 +19,12 @@ namespace TeamSL.Infrastructure.Domain.Queries
         {
             try
             {
-                Logger.Information("Query [{0}] start asking.", typeof(TQuery).Name);
+                Logger.Debug("Query [{0}] start asking.", typeof(TQuery).Name);
                 return _decorated.Ask(query);
             }
             finally
             {
-                Logger.Information("Query [{0}] finish asking.", typeof(TQuery).Name);
+                Logger.Debug("Query [{0}] finish asking.", typeof(TQuery).Name);
             }
         }
     }

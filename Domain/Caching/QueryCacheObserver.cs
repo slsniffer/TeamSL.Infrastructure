@@ -49,7 +49,7 @@ namespace TeamSL.Infrastructure.Domain.Caching
         {
             if (_subscribers.ContainsKey(type))
             {
-                Logger.Information("Notify query subscribers for type: {0}", type.Name);
+                Logger.Debug("Notify query subscribers for type: {0}", type.Name);
                 foreach (var cacheKey in _subscribers[type])
                 {
                     _cacheStorage.Remove(cacheKey);

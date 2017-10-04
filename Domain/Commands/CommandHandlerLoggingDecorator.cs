@@ -1,4 +1,4 @@
-﻿using TeamSL.Infrastructure.Tools.Logging;
+using TeamSL.Infrastructure.Tools.Logging;
 
 namespace TeamSL.Infrastructure.Domain.Commands
 {
@@ -18,12 +18,12 @@ namespace TeamSL.Infrastructure.Domain.Commands
         {
             try
             {
-                Logger.Information("Command [{0}] start.", typeof(TCommand).Name);
+                Logger.Debug("Command [{0}] start.", typeof(TCommand).Name);
                 _decorated.Execute(command);
             }
             finally
             {
-                Logger.Information("Command [{0}] done.", typeof(TCommand).Name);
+                Logger.Debug("Command [{0}] done.", typeof(TCommand).Name);
             }
         }
     }

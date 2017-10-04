@@ -30,14 +30,14 @@ namespace TeamSL.Infrastructure.Domain.Queries
             TResult result;
             var cacheKey = _keyBuilder.Build(query);
 
-            Logger.Information("Try get from cache [{0}]", cacheKey);
+            Logger.Debug("Try get from cache [{0}]", cacheKey);
             if (_storage.TryGet(_keyBuilder.Build(query), out result))
             {
-                Logger.Information("Retrieve from cache [{0}]", cacheKey);
+                Logger.Debug("Retrieve from cache [{0}]", cacheKey);
                 return result;
             }
 
-            Logger.Information("Hit original with cache [{0}]", cacheKey);
+            Logger.Debug("Hit original with cache [{0}]", cacheKey);
             result = _decorated.Ask(query);
 
             if (result == null)
@@ -46,7 +46,7 @@ namespace TeamSL.Infrastructure.Domain.Queries
             var cacheQueryAttr = query.GetType().GetCustomAttribute<CacheQueryAttribute>();
             if (cacheQueryAttr != null)
             {
-                Logger.Information("Store cache [{0}]", cacheKey);
+                Logger.Debug("Store cache [{0}]", cacheKey);
                 _storage.Set(cacheKey, result, DateTime.UtcNow.AddSeconds(cacheQueryAttr.Ttl));
             }
 
