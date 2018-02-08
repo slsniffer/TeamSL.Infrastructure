@@ -4,7 +4,7 @@ using System.Reflection;
 using Autofac;
 using Autofac.Core;
 
-namespace TeamSL.Infrastructure.Domain.Autofac
+namespace TeamSL.Infrastructure.Domain
 {
     public static class ContainerBuilderExtension
     {

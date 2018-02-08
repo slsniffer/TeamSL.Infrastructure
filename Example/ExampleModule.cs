@@ -1,7 +1,6 @@
 using Autofac;
 using TeamSL.Infrastructure.Data.NHibernate;
-using TeamSL.Infrastructure.Data.NHibernate.Autofac;
-using TeamSL.Infrastructure.Domain.Autofac;
+using TeamSL.Infrastructure.Domain;
 using TeamSL.Infrastructure.Domain.Caching;
 using TeamSL.Infrastructure.Example.Data;
 using Module = Autofac.Module;

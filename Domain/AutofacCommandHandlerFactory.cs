@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using TeamSL.Infrastructure.Domain.Commands;
 
-namespace TeamSL.Infrastructure.Domain.Autofac
+namespace TeamSL.Infrastructure.Domain
 {
     public class AutofacCommandHandlerFactory : ICommandHandlerFactory
     {

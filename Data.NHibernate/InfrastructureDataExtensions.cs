@@ -1,6 +1,6 @@
 using Autofac;
 
-namespace TeamSL.Infrastructure.Data.NHibernate.Autofac
+namespace TeamSL.Infrastructure.Data.NHibernate
 {
     public static class InfrastructureDataExtensions
     {

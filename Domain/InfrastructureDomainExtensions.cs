@@ -4,7 +4,7 @@ using TeamSL.Infrastructure.Domain.Caching;
 using TeamSL.Infrastructure.Domain.Commands;
 using TeamSL.Infrastructure.Domain.Queries;
 
-namespace TeamSL.Infrastructure.Domain.Autofac
+namespace TeamSL.Infrastructure.Domain
 {
     public static class InfrastructureDomainExtensions
     {

@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using TeamSL.Infrastructure.Domain.Queries;
 
-namespace TeamSL.Infrastructure.Domain.Autofac
+namespace TeamSL.Infrastructure.Domain
 {
     public class AutofacQueryHandlerFactory : IQueryHandlerFactory
     {

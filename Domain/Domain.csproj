@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.5.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Caching" />
@@ -38,11 +42,16 @@
     <Compile Include="..\Common\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="AutofacCommandHandlerFactory.cs" />
+    <Compile Include="AutofacQueryGateway.cs" />
+    <Compile Include="AutofacQueryHandlerFactory.cs" />
     <Compile Include="Caching\CacheQueryAttribute.cs" />
     <Compile Include="Caching\CacheKeyAttribute.cs" />
     <Compile Include="Caching\CacheObserverAttribute.cs" />
     <Compile Include="Caching\ICacheConfiguration.cs" />
     <Compile Include="Caching\NullCacheConfiguration.cs" />
+    <Compile Include="ContainerBuilderExtension.cs" />
+    <Compile Include="InfrastructureDomainExtensions.cs" />
     <Compile Include="Queries\Gateway\IQueryGateway.cs" />
     <Compile Include="Queries\QueryHandlerCachingDecorator.cs" />
     <Compile Include="Caching\QueryCacheKeyBuilder.cs" />
@@ -67,6 +76,9 @@
       <Project>{146E2006-289D-4483-9927-74E8522AA1DF}</Project>
       <Name>Tools.Logging</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

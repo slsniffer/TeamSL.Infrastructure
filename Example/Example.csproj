@@ -46,16 +46,24 @@
       <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="NHibernate, Version=4.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Data.SQLite, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Core.1.0.105.0\lib\net45\System.Data.SQLite.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleLogger.cs" />
@@ -89,10 +97,6 @@
       <Project>{146E2006-289D-4483-9927-74E8522AA1DF}</Project>
       <Name>Tools.Logging</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Data.NHibernate.Autofac\Data.NHibernate.Autofac.csproj">
-      <Project>{A1EA2F5E-DE29-4530-B3A7-457A8D3676B9}</Project>
-      <Name>Data.NHibernate.Autofac</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Data.NHibernate\Data.NHibernate.csproj">
       <Project>{30623B22-2BCE-445B-BE9E-B2524DDA4E25}</Project>
       <Name>Data.NHibernate</Name>
@@ -100,10 +104,6 @@
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{fe916233-7ccf-4b39-9d11-260206ac1dc2}</Project>
       <Name>Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain.Autofac\Domain.Autofac.csproj">
-      <Project>{CA13647F-E0AF-4BAB-91A5-1BB354C0C5A9}</Project>
-      <Name>Domain.Autofac</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{017E2657-9853-4ABD-A19C-1B20F9847A65}</Project>

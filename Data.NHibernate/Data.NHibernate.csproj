@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.5.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
       <Private>True</Private>
@@ -49,6 +53,7 @@
     </Compile>
     <Compile Include="BaseQueryCriteria.cs" />
     <Compile Include="ContentReader.cs" />
+    <Compile Include="InfrastructureDataExtensions.cs" />
     <Compile Include="INHibernateInitializer.cs" />
     <Compile Include="ISessionProvider.cs" />
     <Compile Include="NhRecord.cs" />
@@ -56,6 +61,7 @@
     <Compile Include="NHibernateRepository.cs" />
     <Compile Include="NHibernateUnitOfWork.cs" />
     <Compile Include="NHibernateUnitOfWorkFactory.cs" />
+    <Compile Include="RepositoryFactory.cs" />
     <Compile Include="Sessions\PerRequestSessionProvider.cs" />
     <Compile Include="Sessions\StaticSessionProvider.cs" />
   </ItemGroup>

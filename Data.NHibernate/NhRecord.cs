@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NHibernate;
 
 namespace TeamSL.Infrastructure.Data.NHibernate
