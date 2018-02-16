@@ -1,3 +1,4 @@
+using System;
 using NHibernate.Util;
 using TeamSL.Infrastructure.Domain.Commands;
 using TeamSL.Infrastructure.Domain.Queries;

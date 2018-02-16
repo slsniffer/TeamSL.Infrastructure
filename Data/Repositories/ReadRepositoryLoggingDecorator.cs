@@ -137,5 +137,12 @@ namespace TeamSL.Infrastructure.Data
 
             return _decorated.FindAll(fetchStrategy, order, skip, count);
         }
+
+        public IList<TRecord> FindAll(IFetchStrategy<TRecord> fetchStrategy, Action<Orderable<TRecord>> order)
+        {
+            Logger.Debug("Find all {0} with fetch:{1} and ordering", typeof(TRecord).Name, fetchStrategy.GetType().Name);
+
+            return _decorated.FindAll(fetchStrategy, order);
+        }
     }
 }

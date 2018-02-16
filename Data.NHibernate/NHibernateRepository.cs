@@ -105,6 +105,11 @@ namespace TeamSL.Infrastructure.Data.NHibernate
             return FindAll(specification).OrderBy(order).Skip(skip).Take(count).ToReadOnlyCollection();
         }
 
+        IList<TRecord> IReadRepository<TRecord>.FindAll(IFetchStrategy<TRecord> fetchStrategy, Action<Orderable<TRecord>> order)
+        {
+            return FindAll(fetchStrategy).OrderBy(order).ToReadOnlyCollection();
+        }
+
         IList<TRecord> IReadRepository<TRecord>.FindAll(IQuerySpecification<TRecord> specification, IFetchStrategy<TRecord> fetchStrategy, Action<Orderable<TRecord>> order)
         {
             return FindAll(specification, fetchStrategy).OrderBy(order).ToReadOnlyCollection();
@@ -142,11 +147,13 @@ namespace TeamSL.Infrastructure.Data.NHibernate
 
         private void Update(TRecord record)
         {
+            record = Session.Merge(record);
             Session.SaveOrUpdate(record);
         }
 
         private void CreateOrUpdate(TRecord record)
         {
+            record = Session.Merge(record);
             Session.SaveOrUpdate(record);
         }
 

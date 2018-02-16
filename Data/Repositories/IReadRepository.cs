@@ -23,5 +23,6 @@ namespace TeamSL.Infrastructure.Data
         IList<TRecord> FindAll(IQuerySpecification<TRecord> specification, IFetchStrategy<TRecord> fetchStrategy, Action<Orderable<TRecord>> order, int skip, int count);
         IList<TRecord> FindAll(IFetchStrategy<TRecord> fetchStrategy);
         IList<TRecord> FindAll(IFetchStrategy<TRecord> fetchStrategy, Action<Orderable<TRecord>> order, int skip, int count);
+        IList<TRecord> FindAll(IFetchStrategy<TRecord> fetchStrategy, Action<Orderable<TRecord>> order);
     }
 }
