@@ -9,10 +9,7 @@ namespace TeamSL.Infrastructure.Data
     {
         public static IList<T> ToReadOnlyCollection<T>(this IEnumerable<T> enumerable)
         {
-            if (enumerable == null)
-            {
-                throw new ArgumentNullException(nameof(enumerable));
-            }
+            Checks.NotNull(enumerable, nameof(enumerable));
 
             return new ReadOnlyCollection<T>(enumerable.ToList());
         }

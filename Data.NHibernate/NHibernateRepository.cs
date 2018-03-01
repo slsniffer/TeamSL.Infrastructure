@@ -14,10 +14,7 @@ namespace TeamSL.Infrastructure.Data.NHibernate
 
         public NHibernateRepository(ISessionProvider sessionProvider)
         {
-            if (sessionProvider == null)
-                throw new ArgumentNullException(nameof(sessionProvider));
-
-            _sessionProvider = sessionProvider;
+            _sessionProvider = sessionProvider ?? throw new ArgumentNullException(nameof(sessionProvider));
         }
 
         private ISession Session

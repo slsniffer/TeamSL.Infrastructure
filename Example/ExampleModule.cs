@@ -28,7 +28,7 @@ namespace TeamSL.Infrastructure.Example
             builder.RegisterQueryHandlers(GetType().Assembly);
             builder.RegisterCommandHandlers(GetType().Assembly);
             builder.RegisterMemoryCaching();
-            builder.RegisterType<NullCacheConfiguration>().As<ICacheConfiguration>();
+            builder.RegisterType<DefaultCacheConfiguration>().As<ICacheConfiguration>();
 
             // Reister logging.
             builder.RegisterModule<LoggingModule>();

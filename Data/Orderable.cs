@@ -10,6 +10,8 @@ namespace TeamSL.Infrastructure.Data
 
         public Orderable(IQueryable<T> queryable)
         {
+            Checks.NotNull(queryable, nameof(queryable));
+
             _queryable = queryable;
         }
 

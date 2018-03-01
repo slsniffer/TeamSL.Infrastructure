@@ -5,18 +5,18 @@ namespace TeamSL.Infrastructure.Domain
 {
     public class AutofacQueryHandlerFactory : IQueryHandlerFactory
     {
-        private readonly IComponentContext _resolver;
+        private readonly IComponentContext _context;
 
-        public AutofacQueryHandlerFactory(IComponentContext resolver)
+        public AutofacQueryHandlerFactory(IComponentContext context)
         {
-            _resolver = resolver;
+            _context = context;
         }
 
         public IQueryHandler<TQuery, TResult> Create<TQuery, TResult>()
             where TQuery : class, IQuery<TResult>
             where TResult : class
         {
-            return _resolver.Resolve<IQueryHandler<TQuery, TResult>>();
+            return _context.Resolve<IQueryHandler<TQuery, TResult>>();
         }
     }
 }

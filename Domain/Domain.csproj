@@ -48,8 +48,9 @@
     <Compile Include="Caching\CacheQueryAttribute.cs" />
     <Compile Include="Caching\CacheKeyAttribute.cs" />
     <Compile Include="Caching\CacheObserverAttribute.cs" />
-    <Compile Include="Caching\ICacheConfiguration.cs" />
-    <Compile Include="Caching\NullCacheConfiguration.cs" />
+    <Compile Include="Caching\Configuration\DefaultCacheConfiguration.cs" />
+    <Compile Include="Caching\Configuration\ICacheConfiguration.cs" />
+    <Compile Include="Caching\Configuration\NullCacheConfiguration.cs" />
     <Compile Include="ContainerBuilderExtension.cs" />
     <Compile Include="InfrastructureDomainExtensions.cs" />
     <Compile Include="Queries\Gateway\IQueryGateway.cs" />

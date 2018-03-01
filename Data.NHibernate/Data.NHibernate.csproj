@@ -56,7 +56,6 @@
     <Compile Include="InfrastructureDataExtensions.cs" />
     <Compile Include="INHibernateInitializer.cs" />
     <Compile Include="ISessionProvider.cs" />
-    <Compile Include="NhRecord.cs" />
     <Compile Include="NHibernateLinqProvider.cs" />
     <Compile Include="NHibernateRepository.cs" />
     <Compile Include="NHibernateUnitOfWork.cs" />
