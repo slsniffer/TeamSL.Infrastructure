@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using TeamSL.Infrastructure.Data.Specifications;
+using TeamSL.Infrastructure.Utils;
 
 namespace TeamSL.Infrastructure.Data
 {
@@ -27,13 +28,6 @@ namespace TeamSL.Infrastructure.Data
             var orderable = new Orderable<TRecord>(queryable);
             order(orderable);
             return orderable.Queryable;
-        }
-
-        public static IQueryable<T> PageBy<T>(this IQueryable<T> queryable, int skip, int take)
-        {
-            Checks.NotNull(queryable, nameof(queryable));
-
-            return queryable.Skip(skip).Take(take);
         }
     }
 }

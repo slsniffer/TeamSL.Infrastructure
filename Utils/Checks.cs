@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TeamSL.Infrastructure.Data
+namespace TeamSL.Infrastructure.Utils
 {
     public class Checks
     {

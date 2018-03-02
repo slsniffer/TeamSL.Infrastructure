@@ -69,6 +69,10 @@
       <Project>{FE916233-7CCF-4B39-9D11-260206AC1DC2}</Project>
       <Name>Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{ebd0cb66-ce3c-49f6-9302-f3101fdd04b7}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

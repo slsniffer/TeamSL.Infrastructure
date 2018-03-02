@@ -38,10 +38,9 @@
     <Compile Include="..\Common\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Checks.cs" />
     <Compile Include="IRepositoryFactory.cs" />
     <Compile Include="Orderable.cs" />
-    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="QueryableExtensions.cs" />
     <Compile Include="Record.cs" />
     <Compile Include="IFetchStrategy.cs" />
     <Compile Include="ILinqProvider.cs" />
@@ -49,7 +48,6 @@
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="IUnitOfWorkFactory.cs" />
-    <Compile Include="QueryableExtensions.cs" />
     <Compile Include="RecordWithKey.cs" />
     <Compile Include="Repositories\RepositoryImpl.cs" />
     <Compile Include="Repositories\ReadRepositoryLoggingDecorator.cs" />
@@ -65,6 +63,10 @@
     <ProjectReference Include="..\Common\Tools.Logging.csproj">
       <Project>{146e2006-289d-4483-9927-74e8522aa1df}</Project>
       <Name>Tools.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{ebd0cb66-ce3c-49f6-9302-f3101fdd04b7}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

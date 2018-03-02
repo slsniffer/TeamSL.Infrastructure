@@ -105,6 +105,10 @@
       <Project>{4e094c35-a465-4c2a-abbd-ac4bd2d4cf72}</Project>
       <Name>Mapping</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{ebd0cb66-ce3c-49f6-9302-f3101fdd04b7}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

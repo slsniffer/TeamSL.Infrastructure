@@ -4,6 +4,7 @@ using System.Linq;
 using NHibernate;
 using NHibernate.Linq;
 using TeamSL.Infrastructure.Data.Specifications;
+using TeamSL.Infrastructure.Utils.Extensions;
 
 namespace TeamSL.Infrastructure.Data.NHibernate
 {
