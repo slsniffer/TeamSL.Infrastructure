@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="Checks.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\QueryableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
