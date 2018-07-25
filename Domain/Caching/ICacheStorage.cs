@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.Caching;
 using TeamSL.Infrastructure.Domain.Commands;
 
 namespace TeamSL.Infrastructure.Domain.Caching
@@ -12,7 +11,6 @@ namespace TeamSL.Infrastructure.Domain.Caching
         void Set<T>(string key, T value, DateTime absoluteExpiration);
         void Set<T>(string key, T value, TimeSpan slidingExpiration);
         void Remove(string key);
-        MemoryCache Cache { get; }
     }
 
     public interface INotify<TCommand> where TCommand : ICommand

@@ -11,22 +11,28 @@ namespace TeamSL.Infrastructure.Domain.Queries
         private readonly IQueryHandler<TQuery, TResult> _decorated;
         private readonly ICacheStorage _storage;
         private readonly IQueryCacheKeyBuilder _keyBuilder;
+        private readonly ICacheConfiguration _cacheConfiguration;
 
         public ILogger Logger { get; set; }
 
         public QueryHandlerCachingDecorator(
             IQueryHandler<TQuery, TResult> decorated,
             ICacheStorage storage,
-            IQueryCacheKeyBuilder keyBuilder)
+            IQueryCacheKeyBuilder keyBuilder,
+            ICacheConfiguration cacheConfiguration)
         {
             _decorated = decorated;
             _storage = storage;
             _keyBuilder = keyBuilder;
+            _cacheConfiguration = cacheConfiguration;
             Logger = NullLogger.Instance;
         }
 
         public TResult Ask(TQuery query)
         {
+            if (!_cacheConfiguration.IsEnabled)
+                return _decorated.Ask(query);
+            
             TResult result;
             var cacheKey = _keyBuilder.Build(query);
 
