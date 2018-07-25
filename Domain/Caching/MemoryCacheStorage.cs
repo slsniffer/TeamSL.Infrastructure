@@ -46,8 +46,6 @@ namespace TeamSL.Infrastructure.Domain.Caching
 
         private void SetInternal<T>(string key, T value, CacheItemPolicy policy)
         {
-            if (_cache.Contains(key))
-                throw new ArgumentException();
             _cache.Add(key, value, policy);
         }
 
