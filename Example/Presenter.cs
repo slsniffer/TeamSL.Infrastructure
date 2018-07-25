@@ -1,7 +1,7 @@
-using System;
 using NHibernate.Util;
 using TeamSL.Infrastructure.Domain.Commands;
 using TeamSL.Infrastructure.Domain.Queries;
+using TeamSL.Infrastructure.Example.Data;
 using TeamSL.Infrastructure.Example.Domain;
 using TeamSL.Infrastructure.Tools.Logging;
 
@@ -29,7 +29,7 @@ namespace TeamSL.Infrastructure.Example
         {
             // Create categories.
             _commander.Send(new CreateCategoryCommand("Category 1"));
-            _commander.Send(new CreateCategoryCommand("Category 2"));
+            _commander.Update(new CategoryRecord {Name = "Category 2"});
 
             // Create three posts in database.
             _commander.Send(new CreatePostCommand("First post title", "First post body", 1));
